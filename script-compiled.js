@@ -42,12 +42,12 @@ var Stopwatch = function (_React$Component) {
 	}, {
 		key: 'format',
 		value: function format(times) {
-			return pad0(times.minutes) + ':' + pad0(times.seconds) + ':' + pad0(Math.floor(times.miliseconds));
+			return this.pad0(times.minutes) + ':' + this.pad0(times.seconds) + ':' + this.pad0(Math.floor(times.miliseconds));
 		}
 	}, {
 		key: 'step',
 		value: function step() {
-			if (!this.running) return;
+			if (!this.state.running) return;
 			this.calculate();
 		}
 	}, {
@@ -80,7 +80,7 @@ var Stopwatch = function (_React$Component) {
 		value: function start() {
 			var _this2 = this;
 
-			if (!this.running) {
+			if (!this.state.running) {
 				this.state.running = true;
 				this.watch = setInterval(function () {
 					return _this2.step();
