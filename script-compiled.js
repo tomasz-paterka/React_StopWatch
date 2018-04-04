@@ -56,12 +56,12 @@ var Stopwatch = function (_React$Component) {
 			var _state$times = this.state.times,
 			    minutes = _state$times.minutes,
 			    seconds = _state$times.seconds,
-			    milliseconds = _state$times.milliseconds;
+			    miliseconds = _state$times.miliseconds;
 
-			milliseconds += 1;
-			if (milliseconds >= 100) {
+			miliseconds += 1;
+			if (miliseconds >= 100) {
 				seconds += 1;
-				milliseconds = 0;
+				miliseconds = 0;
 			}
 			if (seconds >= 60) {
 				minutes += 1;
@@ -71,7 +71,7 @@ var Stopwatch = function (_React$Component) {
 				times: {
 					minutes: minutes,
 					seconds: seconds,
-					milliseconds: milliseconds
+					miliseconds: miliseconds
 				}
 			});
 		}
